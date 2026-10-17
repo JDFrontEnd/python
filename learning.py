@@ -334,3 +334,30 @@ Bucle a través de una cuerda
 """
 # for x in "banana":
 #   print(x)
+
+""" 
+String Length - Longitud de cuerda
+    Para obtener la longitud de una cadena, usa la función.len()
+"""
+a = "Hello, World!"
+#print(len(a)) 13
+
+""" 
+Check String - Cuerda de control
+    Para comprobar si una frase o carácter concreto está presente en una cadena, podemos usar La palabra clave .in
+"""
+
+txt = "la patada voladora del mocho"
+#print("mocho" in txt)  True
+
+txt = "el grito mortal del mudo!"
+if "mudoo" in txt:
+  print("si, el sordo escucho el grito del mucdo")
+
+""" 
+Check if NOT - Comprueba si no
+    Para comprobar si una frase o carácter concreto NO está presente en una cadena, podemos usar La palabra clave .not in
+"""
+# Comprueba si "caro" NO está presente en el siguiente texto:
+txt = "The best things in life are free!"
+#print("expensive" not in txt) True
