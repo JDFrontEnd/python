@@ -64,3 +64,42 @@ pT = L1 + L2 + L3
 aT = (L1 * L2) / 2
 vT = L1 * L2 * L3
 print(f"triangulo: -area: {aT} -perimetro: {pT} -volumen: {vT}")
+
+
+menu = {
+    "papas": 1000,
+    "pool": 2000,
+    "festival": 800
+}
+
+total = None
+
+ver_menu = input("para ver el menu escriba'ver menu'")
+
+if "ver menu" not in ver_menu:
+    ver_menu = input("ERROR SYNTAS: por favor ingrese 'ver menu'")
+elif "ver menu" in ver_menu:
+    print(menu)
+    orden = input("que quieres llevar ej: papas, pool")
+    
+if "papas" in orden:
+    if orden == "papas":
+        total = menu["papas"]
+        pago = input(f"total a pagar: {total}")
+    
+    if orden == "papas, pool" or orden == "pool, papas":
+        total = menu["papas"] + menu["pool"]
+        pago = input(f"total a pagar: {total}")
+        
+    elif orden == "papas, festival" or orden == "festival, papas":
+        total = menu["papas"] + menu["festival"]
+        pago = input(f"total a pagar: {total}")
+    
+    elif orden == "papas, pool, festivas" or orden == "papas, festival, pool" or orden == "pool, papas, festival" or orden == "pool, festival, papas" or orden == "festival, papas, pool" or orden == "festival, pool, papas":
+        total = menu["papas"] + menu["pool"] + menu["festival"]
+elif "pool" in orden:
+    
+    if orden == "pool":
+        total == menu["pool"]
+        pago = input(f"total a pagar: {total}")
+    
