@@ -1,4 +1,6 @@
 import random
+import time
+import os
 
 name = "juan" #str text
 # print(type(name))
@@ -109,3 +111,63 @@ elif "festival" in orden:
 
 if int(pago) == int(total):
     print("pago verificado, gracias por su compra")
+    
+
+
+"""     
+width = 40
+height = 12
+gravity = 18.0
+bounce = 0.78
+fps = 20
+
+balls = [
+    {"x": 5.0, "y": 1.0, "vx": 9.0, "vy": 0},
+    {"x": 25.0, "y": 3.0, "vx": -5.0, "vy": 0.0}
+]
+
+def render():
+    grid = [["" for _ in range(width)] for _ in range(height)]
+    for ball in balls:
+        x = int(ball["x"])
+        y = int(ball["y"])
+        if 0 <= x < width and 0 <= y < height:
+            grid[y][x] = "0"
+            
+    print("+" + "-" * width + "+")
+    for row in grid:
+        print("|" + "".join(row) + "|")
+    print("+" + "-" * width + "+")
+def update(dt):
+    for ball in balls:
+        ball["vy"] += gravity * dt
+        ball["x"] += ball["vx"] * dt
+        ball["y"] += ball["vy"] * dt
+        if ball["x"] <= 0:
+            ball["x"] = 0
+            ball["x"] <= abs(ball["vx"])
+            
+        elif ball["x"] >= width - 1:
+            ball["x"] = width - 1
+            ball["x"] = -abs(ball["vx"])
+            
+        if ball["y"] >= height - 1:
+            ball["y"] = height - 1
+            ball["vy"] = -abs(ball["y"]) * bounce
+            
+        if ball["y"] <= 0:
+            ball["y"] = 0
+            ball["vy"] = abs(ball["y"])
+    print("python physics simulator")
+    print("press Ctrl+c to stop-")
+    
+try:
+    while True:
+        os.system("cls" if os.name == "nt" else "clear")
+        update(1 / fps)
+        render()
+        print("\nGravity:", gravity)
+        print("Objects:", len(balls))
+        time.sleep(1 / fps)
+except KeyboardInterrupt:
+    print("\nSimution: n stopped.")     """
