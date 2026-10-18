@@ -72,34 +72,40 @@ menu = {
     "festival": 800
 }
 
-total = None
-
-ver_menu = input("para ver el menu escriba'ver menu'")
+ver_menu = input("para ver el menu escriba'ver menu' /")
 
 if "ver menu" not in ver_menu:
-    ver_menu = input("ERROR SYNTAS: por favor ingrese 'ver menu'")
+    ver_menu = input("ERROR SYNTAS: por favor ingrese 'ver menu' /")
 elif "ver menu" in ver_menu:
     print(menu)
-    orden = input("que quieres llevar ej: papas, pool")
     
+orden = input("que quieres llevar ej: papas, pool /")
+    
+total = menu
+
 if "papas" in orden:
     if orden == "papas":
-        total = menu["papas"]
-        pago = input(f"total a pagar: {total}")
-    
-    if orden == "papas, pool" or orden == "pool, papas":
+        global pago
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+    elif orden == "papas, pool" or orden == "pool, papas":
         total = menu["papas"] + menu["pool"]
-        pago = input(f"total a pagar: {total}")
-        
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")    
     elif orden == "papas, festival" or orden == "festival, papas":
         total = menu["papas"] + menu["festival"]
-        pago = input(f"total a pagar: {total}")
-    
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
     elif orden == "papas, pool, festivas" or orden == "papas, festival, pool" or orden == "pool, papas, festival" or orden == "pool, festival, papas" or orden == "festival, papas, pool" or orden == "festival, pool, papas":
         total = menu["papas"] + menu["pool"] + menu["festival"]
-elif "pool" in orden:
-    
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")    
+elif "pool" in orden:    
     if orden == "pool":
         total == menu["pool"]
-        pago = input(f"total a pagar: {total}")
-    
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+    elif orden == "pool, festival" or orden == "festival, pool":
+        total = menu["pool"] + menu["festival"]    
+elif "festival" in orden:
+    if orden == "festival":
+        total = menu["festival"]
+        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+
+if int(pago) == int(total):
+    print("pago verificado, gracias por su compra")
