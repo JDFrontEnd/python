@@ -326,7 +326,7 @@ Las cuerdas son matrices - Strings are Arrays
 
 """
 a = "Hello, World!"
-#print(a[1])
+#print(a[1]) e
 
 """ 
 Bucle a través de una cuerda 
@@ -361,3 +361,59 @@ Check if NOT - Comprueba si no
 # Comprueba si "caro" NO está presente en el siguiente texto:
 txt = "The best things in life are free!"
 #print("expensive" not in txt) True
+
+""" 
+Python - Slicing Strings - Cortes de cadenas
+
+    Puedes devolver un rango de caracteres usando la sintaxis de cortes. Especifique el índice inicial y el índice final, separados por dos puntos, para devolver un parte de la cuerda.
+"""
+# Lleva los caracteres de la posición 2 a la posición 5 (no incluido):
+b = "hello, world!"
+# print(b[2:5]) ello
+# Nota: El primer carácter tiene índice 0.
+""" 
+Corte desde el principio
+    Al omitir el índice inicial, el rango comenzará en el primer carácter: 
+"""
+# Consigue los caracteres desde el principio hasta la posición 5 (no incluido):
+b = "hello, world!"
+# print(b[:5]) hello
+""" 
+Corte hasta el final
+    Al omitir el índice final, el rango irá al final:
+"""
+# Lleva a los caracteres desde la posición 2 y hasta el final:
+b = "Hello, World!"
+# print(b[2:]) llo, world!
+""" 
+Indexación negativa
+    Utiliza índices negativos para comenzar el corte desde el final de la cadena:
+"""
+# Descubre a los caracteres: De: "o" en "world!" (posición -5) Para, pero no incluyó: "d" en "world!" (posición -2):
+b = "Hello, World!"
+# print(b[-5:-2]) -5 pocision desde donde inicia la cadena contando de atras a delante -2 donde termina de atras adelante la posicion va desde 1 no desde 0, no existe un índice negativo 0, porque el 0 ya está reservado para el primer elemento desde el inicio
+
+""" 
+Python - Modify Strings - Modificar cadenas
+    Python tiene un conjunto de métodos integrados que puedes usar en cadenas.
+    
+    Upper Case
+    El método devuelve la cadena en mayúsculas:upper()
+"""
+a = "Hello, World!"
+# print(a.upper())
+
+""" Minúsculas
+    El método devuelve la cadena en minúsculas:lower() """
+# print(a.lower())
+"""
+Eliminar espacios en blanco
+    El espacio en blanco es el espacio antes y/o después del texto real, y muy a menudo quieres eliminar ese espacio. 
+    El método elimina cualquier espacio en blanco desde el principio o el final:strip()
+"""
+a = " Hello, World!    "
+# print(a.strip())
+
+""" 
+Reemplazar la cuerda
+"""
