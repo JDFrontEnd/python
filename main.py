@@ -83,12 +83,15 @@ elif "ver menu" in ver_menu:
     
 orden = input("que quieres llevar ej: papas, pool /")
     
-total = menu.keys
+total = menu
 
 pago = 10
 
+
+
 if "papas" in orden:
     if orden == "papas":
+        total = menu
         pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
     elif orden == "papas, pool" or orden == "pool, papas":
         total = menu["papas"] + menu["pool"]
