@@ -83,7 +83,7 @@ elif "ver menu" in ver_menu:
     
 orden = input("que quieres llevar ej: papas, pool /")
     
-total = menu
+total = menu.keys
 
 pago = 10
 
