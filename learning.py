@@ -447,4 +447,25 @@ Python - Formato - Cadenas
     Para especificar una cadena como una cuerda f, simplemente pon a delante de la cuerda literal, f y {} añadir corchetes como marcadores de posición para variables y otras operaciones.
 """
 
-age = 
+age = 36
+txt = f"My name is John, I am {age}"
+
+
+""" Un marcador de posición puede incluir un modificador para formatear el valor.
+
+Un modificador se incluye añadiendo dos puntos seguido de un tipo de formato legal, como que significa número de punto fijo con 2 decimales::.2f """
+price = 59
+txt = f"The price is {price:.2f} dollars"
+#print(txt)
+
+""" 
+Un marcador de posición puede contener código Python, como operaciones matemáticas:
+"""
+
+txt = f"The price is {20 * 59} dollars"
+
+""" 
+Escape Character
+
+
+"""

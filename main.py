@@ -85,91 +85,40 @@ orden = input("que quieres llevar ej: papas, pool /")
     
 total = menu
 
+pago = 10
+
 if "papas" in orden:
     if orden == "papas":
-        global pago
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
     elif orden == "papas, pool" or orden == "pool, papas":
         total = menu["papas"] + menu["pool"]
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")    
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))  
     elif orden == "papas, festival" or orden == "festival, papas":
         total = menu["papas"] + menu["festival"]
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
     elif orden == "papas, pool, festivas" or orden == "papas, festival, pool" or orden == "pool, papas, festival" or orden == "pool, festival, papas" or orden == "festival, papas, pool" or orden == "festival, pool, papas":
         total = menu["papas"] + menu["pool"] + menu["festival"]
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")    
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))   
 elif "pool" in orden:    
     if orden == "pool":
         total == menu["pool"]
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
     elif orden == "pool, festival" or orden == "festival, pool":
         total = menu["pool"] + menu["festival"]    
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
 elif "festival" in orden:
     if orden == "festival":
         total = menu["festival"]
-        pago = input(f"total a pagar: {total} ingrese el total a pagar: /")
+        pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
 
-if int(pago) == int(total):
+if pago != total:
+    pago = int(input(f"El total a pagar es incorreto: {total} ingrese el total a pagar: /"))
+    
+
+if pago == int(total):
     print("pago verificado, gracias por su compra")
     
-"""    
-width = 40
-height = 12
-gravity = 18.0
-bounce = 0.78
-fps = 20
-
-balls = [
-    {"x": 5.0, "y": 1.0, "vx": 9.0, "vy": 0},
-    {"x": 25.0, "y": 3.0, "vx": -5.0, "vy": 0.0}
-]
-
-def render():
-    grid = [["" for _ in range(width)] for _ in range(height)]
-    for ball in balls:
-        x = int(ball["x"])
-        y = int(ball["y"])
-        if 0 <= x < width and 0 <= y < height:
-            grid[y][x] = "0"
-            
-    print("+" + "-" * width + "+")
-    for row in grid:
-        print("|" + "".join(row) + "|")
-    print("+" + "-" * width + "+")
-def update(dt):
-    for ball in balls:
-        ball["vy"] += gravity * dt
-        ball["x"] += ball["vx"] * dt
-        ball["y"] += ball["vy"] * dt
-        if ball["x"] <= 0:
-            ball["x"] = 0
-            ball["x"] <= abs(ball["vx"])
-            
-        elif ball["x"] >= width - 1:
-            ball["x"] = width - 1
-            ball["x"] = -abs(ball["vx"])
-            
-        if ball["y"] >= height - 1:
-            ball["y"] = height - 1
-            ball["vy"] = -abs(ball["y"]) * bounce
-            
-        if ball["y"] <= 0:
-            ball["y"] = 0
-            ball["vy"] = abs(ball["y"])
-    print("python physics simulator")
-    print("press Ctrl+c to stop-")
-    
-try:
-    while True:
-        os.system("cls" if os.name == "nt" else "clear")
-        update(1 / fps)
-        render()
-        print("\nGravity:", gravity)
-        print("Objects:", len(balls))
-        time.sleep(1 / fps)
-except KeyboardInterrupt:
-    print("\nSimution: n stopped.")     """
-    
+""" 
 name = input("Cual es tu nombre?") 
 age = int(input("cual es tu edad?"))
 
@@ -179,3 +128,21 @@ elif age >= 18 and age <= 65:
     print(f"hola, {name} ere mayor de edad")
 else:
     print(f"Hola, {name} eres adulto mayor")   
+ """
+""" 
+print("calculadora")
+number1 = int(input("ingrese el primer vcalor de la operacion:"))
+operador = input("ingrese el operador matematico (suma: +, resta: -, multiplicacion: *, division: /):")
+number2 = input("ingrese el segundo valor de la operacion")
+
+
+if "+" in operador:
+    print(number1 + number2)
+elif "-" in operador:
+    print(number1 + number2)
+elif "*" in operador:
+    print(number1 * number2)
+elif "/" in operador:
+    print(number1 / number2)
+
+ """
