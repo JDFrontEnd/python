@@ -112,9 +112,7 @@ elif "festival" in orden:
 if int(pago) == int(total):
     print("pago verificado, gracias por su compra")
     
-
-
-"""     
+"""    
 width = 40
 height = 12
 gravity = 18.0
@@ -171,3 +169,13 @@ try:
         time.sleep(1 / fps)
 except KeyboardInterrupt:
     print("\nSimution: n stopped.")     """
+    
+name = input("Cual es tu nombre?") 
+age = int(input("cual es tu edad?"))
+
+if age < 18:
+    print(f"Hola, {name} eres menor de edad")
+elif age >= 18 and age <= 65:
+    print(f"hola, {name} ere mayor de edad")
+else:
+    print(f"Hola, {name} eres adulto mayor")   

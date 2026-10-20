@@ -406,14 +406,45 @@ a = "Hello, World!"
 """ Minúsculas
     El método devuelve la cadena en minúsculas:lower() """
 # print(a.lower())
+
+""" 
+PRIMERA LETRA 
+    convierte la primera letra en mayusculas
+    capitalize()
+"""
+#print(a.capitalize())
+
 """
 Eliminar espacios en blanco
     El espacio en blanco es el espacio antes y/o después del texto real, y muy a menudo quieres eliminar ese espacio. 
     El método elimina cualquier espacio en blanco desde el principio o el final:strip()
 """
+
 a = " Hello, World!    "
 # print(a.strip())
 
 """ 
 Reemplazar la cuerda
+
+    El método replace() reemplaza una cadena por otra cadena:
 """
+
+a = "Hello, World!"
+#print(a.replace("H", "J"))
+
+""" 
+Split String - Cuerda partida
+    El método split() divide la cadena en subcadenas si encuentra instancias del separador:
+"""
+a = "Hello, World!"
+#print(a.split(",")) returns ['Hello', ' World!']
+
+""" 
+Python - Formato - Cadenas
+
+    F-Strings
+
+    Para especificar una cadena como una cuerda f, simplemente pon a delante de la cuerda literal, f y {} añadir corchetes como marcadores de posición para variables y otras operaciones.
+"""
+
+age = 
