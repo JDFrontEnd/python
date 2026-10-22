@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(20, 19, 19);
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: darkcyan;
+}
+
+.logo__container {
+    background-color: firebrick;
+}
+
+.logo {
+    background-color: bisque;
+}
+
+.nav {
+    background-color: blueviolet;
+}
+
+.nav__bar {
+    display: flex;
+    background-color: gray;
+}
+
+.nav__item {
+    background-color: gold;
+}
+
+.nav__link {
+    background-color: tan;
+}

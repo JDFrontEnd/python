@@ -198,8 +198,6 @@ print("Python is " + x)
 """
 
 
-
-
 """ 
 Tipos de datos en Python
     En programación, el tipo de dato es un concepto importante. Las variables pueden almacenar datos de diferentes tipos, y diferentes tipos pueden hacer cosas diferentes. Python tiene los siguientes tipos de datos integrados por defecto, en estas categorías:

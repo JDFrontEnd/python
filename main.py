@@ -68,18 +68,25 @@ vT = L1 * L2 * L3
 print(f"triangulo: -area: {aT} -perimetro: {pT} -volumen: {vT}")
 
 
+
+""" maquina de golocinas """
+
 menu = {
     "papas": 1000,
     "pool": 2000,
     "festival": 800
 }
+ 
 
-ver_menu = input("para ver el menu escriba'ver menu' /")
-
-if "ver menu" not in ver_menu:
-    ver_menu = input("ERROR SYNTAS: por favor ingrese 'ver menu' /")
-elif "ver menu" in ver_menu:
-    print(menu)
+def MenuFun():
+    global ver_menu
+    ver_menu = input("para ver el menu escriba'ver menu' /")
+    if ver_menu != "ver menu":
+        ver_menu = input("ERROR: para ver el menu ingrese correctamente 'ver menu' /")
+        return MenuFun()
+    elif ver_menu == "ver menu":
+        print(menu)
+MenuFun()
     
 orden = input("que quieres llevar ej: papas, pool /")
     
@@ -87,11 +94,9 @@ total = menu
 
 pago = 10
 
-
-
 if "papas" in orden:
     if orden == "papas":
-        total = menu
+        total = menu["papas"]
         pago = int(input(f"total a pagar: {total} ingrese el total a pagar: /"))
     elif orden == "papas, pool" or orden == "pool, papas":
         total = menu["papas"] + menu["pool"]
@@ -121,31 +126,36 @@ if pago != total:
 if pago == int(total):
     print("pago verificado, gracias por su compra")
     
-""" 
-name = input("Cual es tu nombre?") 
-age = int(input("cual es tu edad?"))
+    
+    
+#calculo de edad 
+    
+name = input("Cual es tu nombre? ") 
+age = int(input("cual es tu edad? "))
 
 if age < 18:
     print(f"Hola, {name} eres menor de edad")
 elif age >= 18 and age <= 65:
-    print(f"hola, {name} ere mayor de edad")
+    print(f"hola, {name} eres mayor de edad")
 else:
     print(f"Hola, {name} eres adulto mayor")   
- """
-""" 
+    
+    
+    
+""" calculadora """
+
 print("calculadora")
-number1 = int(input("ingrese el primer vcalor de la operacion:"))
-operador = input("ingrese el operador matematico (suma: +, resta: -, multiplicacion: *, division: /):")
-number2 = input("ingrese el segundo valor de la operacion")
+number1 = int(input("ingrese el primer valor de la operacion: "))
+operador = input("ingrese el operador matematico (suma: +, resta: -, multiplicacion: *, division: /): ")
+number2 = int(input("ingrese el segundo valor de la operacion: "))
 
 
 if "+" in operador:
-    print(number1 + number2)
+    print(f"Resultado: {number1 + number2}")
 elif "-" in operador:
-    print(number1 + number2)
+    print(f"Resultado: {number1 - number2}")
 elif "*" in operador:
-    print(number1 * number2)
+    print(f"Resultado: {number1 * number2}")
 elif "/" in operador:
-    print(number1 / number2)
-
- """
+    print(f"Resultado: {number1 / number2}")
+    
