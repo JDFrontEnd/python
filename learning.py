@@ -478,19 +478,19 @@ El carácter escape te permite usar comillas dobles cuando normalmente no te dej
 """
 txt = "We are the so-called \"Vikings\" from the north."
 
-""" 
-\'	Single Quote - comillas simples
-\\	Backslash - barra invertidad
-\n	New Line - salto de linea
-\r	Carriage Return	- retorno de carriage
-\t	Tab	
-\b	Backspace - retroceso
-\f	Form Feed - salto de pagina
-\ooo  Octal value - valor octal	
-\xhh	Hex value - 
-"""
 
-""" Métodos de cuerdas
+# \'	Single Quote - comillas simples
+# \\	Backslash - barra invertidad
+# \n	New Line - salto de linea
+# \r	Carriage Return	- retorno de carriage
+# \t	Tab	
+# \b	Backspace - retroceso
+# \f	Form Feed - salto de pagina
+# \ooo  Octal value - valor octal	
+# \xhh	Hex value - 
+
+""" 
+Métodos de cuerdas
 
     Python tiene un conjunto de métodos integrados que puedes usar en cadenas.
     
@@ -541,9 +541,7 @@ title()	Converts the first character of each word to upper case
 translate()	Returns a translated string
 upper()	Converts a string into upper case
 zfill()	Fills the string with a specified number of 0 values at the beginning
-
-
-
 """
 
-
+age = 20
+print("edad:"+ str(age))
