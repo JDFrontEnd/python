@@ -542,7 +542,11 @@ zfill()	Fills the string with a specified number of 0 values at the beginning
 
 a = "Hell0, World!"
 b = a.split(",")
+c = a[-6:-1], a[:6]
 print(b[1] + b[0])
+print(c)
+
+
 
 
 
