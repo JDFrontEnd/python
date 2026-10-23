@@ -540,8 +540,9 @@ upper()	Converts a string into upper case
 zfill()	Fills the string with a specified number of 0 values at the beginning
 """
 
-b = "Hello, World!"
-print(b[5:5])
+a = "Hell0, World!"
+b = a.split(",")
+print(b[1] + b[0])
 
 
 
