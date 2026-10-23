@@ -128,7 +128,7 @@ if pago == int(total):
     
     
     
-#calculo de edad 
+"""calculo de edad""" 
     
 name = input("Cual es tu nombre? ") 
 age = int(input("cual es tu edad? "))

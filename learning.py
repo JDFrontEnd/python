@@ -92,8 +92,8 @@ Variables Python - Consigue el tipo
 """
 x = 5
 y = "John"
-print(type(x))
-print(type(y))
+# print(type(x))
+# print(type(y))
 
 """ 
 Variables Python - Case-Sensitive 
@@ -388,7 +388,6 @@ Indexación negativa
     Utiliza índices negativos para comenzar el corte desde el final de la cadena:
 """
 # Descubre a los caracteres: De: "o" en "world!" (posición -5) Para, pero no incluyó: "d" en "world!" (posición -2):
-b = "Hello, World!"
 # print(b[-5:-2]) -5 pocision desde donde inicia la cadena contando de atras a delante -2 donde termina de atras adelante la posicion va desde 1 no desde 0, no existe un índice negativo 0, porque el 0 ya está reservado para el primer elemento desde el inicio
 
 """ 
@@ -541,5 +540,9 @@ upper()	Converts a string into upper case
 zfill()	Fills the string with a specified number of 0 values at the beginning
 """
 
-age = 20
-print("edad:"+ str(age))
+b = "Hello, World!"
+print(b[5:5])
+
+
+
+
