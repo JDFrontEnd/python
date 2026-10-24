@@ -543,8 +543,8 @@ zfill()	Fills the string with a specified number of 0 values at the beginning
 a = "Hell0, World!"
 b = a.split(",")
 c = a[-6:-1], a[:6]
-#print(b[1] + b[0])
-#print(c)
+print(b[1] + b[0])
+print(c)
 
 hoy = 23
 octuber = "octubre"
@@ -563,11 +563,11 @@ dolares = 120
 print(f"para la TRM de hoy es: ${TRM} total es de ${TRM * dolares}")
 
 
-usuario = input("ingrese su nombre de usuario")
+usuario = input("ingrese su nombre de usuario: ")
 
-password = int(input("ingrese su contraseña"))
+contraseña = int(input("ingrese su contraseña: "))
 
-respuesta = input("que quieres hacer. (retirar, tranferir, consignar)")
+respuesta = input("que quieres hacer: (retirar, tranferir, consignar) ")
 
 saldo = 10000
 
@@ -582,21 +582,25 @@ elif respuesta == "tranferir":
     print(f"dinero transferido: ${tranferencia}")
     print(f"su saldo total es: ${saldo}")
 elif respuesta == "consignar":
-    consignar = int(input("cuanto desea consignar"))
-    
+    consignacion = int(input("cuanto desea consignar"))
+    saldo = saldo + consignacion
+    print(f"dinero consignado: ${consignacion}")
+    print(f"su saldo total es: ${saldo}")
 
-
-saldo = 10000
-TRM = 3825
-
+""" saldo = 10000
+TRM = 3825 
+"""
+""" 
 tranferencia = int(input("ingrese el monto a tranferir:"))
 saldo = tranferencia - saldo
 print(f"saldo total: ${saldo * TRM}")
 
 retiro = int(input("ingrese el monto a tranferir:"))
 saldo = retiro - saldo
-print(f"saldo total: ${saldo * TRM}")
-
+print(f"saldo total: ${saldo * TRM}") 
+"""
+""" 
 consignacion = int(input("ingrese el monto a tranferir:"))
 saldo = consignacion + saldo
-print(f"saldo total: ${saldo * TRM}")
+print(f"saldo total: ${saldo * TRM}") 
+"""
