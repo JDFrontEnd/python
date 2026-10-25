@@ -1,6 +1,4 @@
 import random
-import time
-import os
 
 name = "juan" #str text
 # print(type(name))
@@ -190,34 +188,53 @@ print(f"para la TRM de hoy es: ${TRM} total es de ${TRM * dolares}")
 
 user = {
     "usuario": "Juan Diego Mesa",
-    "passward": 123456789
+    "passward": 123456789,
+    "saldo": 0
 }
+
+saldo = user["saldo"]
 
 def login():
     global usuario
     global contraseña
+    global actionUser
     usuario = input("ingrese su nombre de usuario: ")
-    contraseña = int(input("ingrese su contraseña: "))
+
+    if usuario != user["usuario"]:
+        print('"ALVERTENCIA"\n El nombre de usuario es incorrecto o no esta registrado, por favor ingrese el usuario correctamente')
+        return login()
+    elif usuario == user["usuario"]:
+        contraseña = int(input("ingrese su contraseña: "))
+        
+        
+
+    actionUser = input("que quieres hacer: (retirar, tranferir, consignar) ")
 
     print()
 
 
+def interfaz():
+    global accoutConfirmation
+    accoutConfirmation = input("\n HOLA BIENVENIDO A BANK.PY \n ¿tienes una cuenta abierta?\n  si - no / ")
+    
+    if accoutConfirmation == "si":
+        login()
+    else:
+        print("si no tines cuenta crea una")
+        
 
-respuesta = input("que quieres hacer: (retirar, tranferir, consignar) ")
 
-saldo = 10000
-
-if respuesta == "retirar":
+if actionUser == "retirar":
     montoRetirar = int(input("cuanto deseas retirar:"))
     saldo = saldo - montoRetirar
     print(f"dinero retirado: ${montoRetirar}")
     print(f"su saldo restante: ${saldo}")
-elif respuesta == "tranferir":
+elif actionUser == "tranferir":
     tranferencia = int(input("ingrese un monto a tranferin"))
     saldo = saldo - tranferencia
     print(f"dinero transferido: ${tranferencia}")
     print(f"su saldo total es: ${saldo}")
-elif respuesta == "consignar":
+elif actionUser == "consignar":
     consignacion = int(input("cuanto desea consignar"))
     saldo = saldo + consignacion
     print(f"dinero consignado: ${consignacion}")
