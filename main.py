@@ -215,7 +215,7 @@ def login():
 
 def interfaz():
     global accoutConfirmation
-    accoutConfirmation = input("\n HOLA BIENVENIDO A BANK.PY \n ¿tienes una cuenta abierta?\n  si - no / ")
+    accoutConfirmation = input("\n HOLA BIENVENIDO A BANK.PY \n ¿tienes una cuenta abierta?\n  si - no \\ ")
     
     if accoutConfirmation == "si":
         login()

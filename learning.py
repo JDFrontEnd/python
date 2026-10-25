@@ -476,9 +476,9 @@ El carácter escape te permite usar comillas dobles cuando normalmente no te dej
 txt = "We are the so-called \"Vikings\" from the north."
 
 
-# \'	Single Quote - comillas simples
-# \\	Backslash - barra invertidad
-# \n	New Line - salto de linea
+# \'	Single Quote - txt = 'It\'s alright.' -- It's alright.
+# \\	Backslash - txt = "This will insert one \\ (backslash)." --- This will insert one \ (backslash).
+# \n	New Line - 
 # \r	Carriage Return	- retorno de carriage
 # \t	Tab	
 # \b	Backspace - retroceso
