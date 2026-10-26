@@ -14,3 +14,13 @@
 
 """
 
+users = {
+    "user1": { "usuario": "juan diego mesa", "passward": 123456789, "saldo": 0 },
+    "user2": { "usuario": "arnulfo casas edificios", "passward": 2026123, "saldo": 0 }
+}
+
+PasswardAdd = 1
+NombreAdd = ""
+
+
+users["user3"] = { "usuario": NombreAdd, "passward": PasswardAdd, "saldo": 0 }
