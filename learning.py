@@ -540,3 +540,101 @@ upper()	Converts a string into upper case
 zfill()	Fills the string with a specified number of 0 values at the beginning
 """
 
+
+
+""" 
+Booleanos Python
+
+
+Evalúa valores y variables
+La función bool() te permite evaluar cualquier valor, y te dará a ti a cambio, True o False
+
+Evalúa una cadena y un número:
+
+print(bool("Hello"))
+print(bool(15))
+
+
+
+La mayoría de los valores son verdaderos
+Casi cualquier valor se evalúa hasta si tiene algún tipo de contenido.True
+
+Cualquier cadena es True, excepto las cadenas vacías.
+
+Cualquier número es True, excepto 0.
+
+Cualquier lista, tupla, conjunto y diccionario son True, excepto vacíos.
+
+
+
+Algunos valores son falsos
+De hecho, no hay muchos valores que evalúen a False, salvo los valores vacíos, como (), [], {}, "", el número 0, y el valor None. Y False, por supuesto, el valor se evalúa a False
+
+Lo siguiente devolverá Falso:
+
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+
+Las funciones pueden devolver un booleano
+
+Python también tiene muchas funciones integradas que devuelven un valor booleano, como la función, que puede usarse para determinar si un objeto es de un determinado tipo de dato:isinstance()
+
+Comprueba si un objeto es entero o no:
+
+x = 200
+print(isinstance(x, int))
+"""
+
+
+
+
+""" 
+Operadores Python
+
+Python divide los operadores en los siguientes grupos:
+
+Operadores aritméticos
+Operadores de asignación
+Operadores de comparación
+Operadores lógicos
+Operadores identidad
+Operadores de membresía
+Operadores bit a bit
+
+
+División en Python
+Python tiene dos operadores de división:
+
+/ - División (devuelve un float)
+// - División de suelo (devuelve un int)
+"""
+
+""" 
+Operadores de asignación en Python
+
+Operadores de asignación
+Los operadores de asignación se utilizan para asignar valores a variables:
+
+Operator   Example      Sameas
+    =	    x = 5	    x = 5	
+    +=	    x += 3	    x = x + 3	
+    -=	    x -= 3	    x = x - 3	
+    *=	    x *= 3	    x = x * 3	
+    /=	    x /= 3	    x = x / 3	
+    %=	    x %= 3	    x = x % 3	
+    //= 	x //=3      x = x // 3	
+    **= 	x **=3	    x = x ** 3	
+    &=	    x &= 3	    x = x & 3	
+    |=	    x |= 3	    x = x | 3	
+    ^=	    x ^= 3	    x = x ^ 3	
+    >>= 	x >>=3	    x = x >> 3	
+    <<= 	x <<=3	    x = x << 3	
+    :=	    print(x:=3)	x = 3 print(x)
+
+
+ """
