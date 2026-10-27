@@ -638,3 +638,32 @@ Operator   Example      Sameas
 
 
  """
+ 
+ 
+ 
+ 
+""" 
+The Walrus Operator
+ 
+El operador walrus es una característica de Python que permite asignar un valor a una variable dentro de una expresión.
+
+La idea principal es que puedes asignar un valor a una variable y utilizar ese mismo valor al mismo tiempo, sin tener que escribir una asignación separada.
+ 
+"""
+
+edad = 20
+
+print(edad)
+# El operador = asigna el valor 20 a la variable edad.
+
+# print(edad := 20)
+
+precio = 10000
+descuento = precio * 0.20
+precio_final = precio - descuento
+
+# print(precio_final)
+
+precio = 10000
+
+# print(precio_final := precio - precio * 0.20)
