@@ -703,3 +703,258 @@ x = 5
 # print(1 < x < 10)
 
 # print(1 < x and x < 10)
+
+
+""" 
+Operadores de identidad en Python
+
+Operadores de identidad
+Los operadores identidad se utilizan para comparar los objetos, no si son iguales, sino si en realidad son el mismo objeto, con la misma ubicación de memoria:
+
+
+Diferencia entre y is==
+es - Comprueba si ambas variables apuntan al mismo objeto en memoria
+== - Comprueba si los valores de ambas variables son iguales
+"""
+
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+# print(x is z)
+# print(x is y)
+# print(x == y)
+
+""" 
+El operador devuelve si ambas variables no apuntan al mismo objeto:is notTrue
+
+"""
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+
+# print(x is not y)
+
+
+""" 
+Python Bitwise Operators
+
+Operadores de bits en Python
+"""
+
+
+
+""" 
+Precedencia de Operador en Python
+
+Precedencia de operador
+La precedencia de operador describe el orden en que se realizan las operaciones.
+
+os paréntesis tienen la mayor precedencia, lo que significa que las expresiones dentro Los paréntesis deben evaluarse primero:
+"""
+# print((6 + 3) - (6 + 3))
+
+
+""" 
+La multiplicación tiene mayor precedencia que Suma , y por tanto las multiplicaciones son Evaluado antes de añadidos:*+
+"""
+# print(100 + 5 * 3)
+
+""" 
+Orden de precedencia
+El orden de precedencia se describe en la tabla siguiente, comenzando con la precedencia más alta en la parte superior:
+
+Operator	    Description	
+()	            Parentheses	
+**	            Exponentiation	
++x  -x  ~x	    Unary plus, unary minus, and bitwise NOT	
+*  /  //  %	    Multiplication, division, floor division, and modulus	
++  -	        Addition and subtraction	
+<<  >>	        Bitwise left and right shifts	
+&	            Bitwise AND	
+^	            Bitwise XOR	
+|	            Bitwise OR	
+==  !=  >  >=  <  <=  is  is not  in  not in 	Comparisons, identity, and membership operators	
+not	            Logical NOT	
+and	            AND	
+or	            OR	
+"""
+0
+""" 
+Evaluación de izquierda a derecha
+Si dos operadores tienen la misma precedencia, la expresión se evalúa de izquierda a derecha.
+"""
+
+""" 
+Adición y La resta tiene la misma precedencia, y por tanto Evaluamos la expresión de izquierda a derecha:+-
+"""
+# print(5 + 4 - 7 + 3)
+
+
+
+
+""" 
+Python Lists
+
+
+Las listas se utilizan para almacenar varios elementos en una sola variable.
+
+Las listas son uno de los 4 tipos de datos integrados en Python que se utilizan para almacenar colecciones de los otros 3 son Tuple, Set y Dictionary, todos con diferentes cualidades y usos.
+
+Las listas se crean usando corchetes:
+
+Ejemplo
+"""
+
+frutas = ["pera", "uva", "anis"]
+
+"""  
+List Items
+
+Los elementos de la lista están ordenados, son modificables y permiten valores duplicados.
+
+Los elementos de la lista están indexados, el primer elemento tiene índice [0], El segundo elemento tiene índice, [1]
+
+Nota: Existen algunos métodos de lista que cambian el orden, pero en general: el orden de los elementos no cambia.
+
+Cambiantes
+La lista es cambiable, lo que significa que podemos cambiar, añadir y eliminar elementos de una lista una vez creada.
+
+
+Permitir duplicados
+Como las listas están indexadas, las listas pueden tener elementos con el mismo valor:
+"""
+
+frutas = ["apple", "banana", "cherry", "apple", "cherry"]
+
+""" 
+Longitud de la lista
+Para determinar cuántos elementos tiene una lista, utiliza la función: len()
+
+"""
+thislist = ["apple", "banana", "cherry"]
+# print(len(thislist))
+
+""" 
+Elementos de la lista - Tipos de datos
+Los elementos de la lista pueden ser de cualquier tipo de dato:
+"""
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+
+""" 
+Una lista puede contener diferentes tipos de datos:
+"""
+list1 = ["abc", 34, True, 40, "male"]
+
+""" 
+type()
+Desde la perspectiva de Python, las listas se definen como objetos con el tipo de dato 'lista':
+<class 'list'>
+"""
+
+"""
+El constructor list()
+También es posible usar el constructor list() al crear un nueva lista. 
+"""
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+# print(thislist)
+
+""" 
+Colecciones de Python (Arrays)
+Existen cuatro tipos de datos de colección en el lenguaje de programación Python:
+
+List es una colección ordenada y cambiable. Permite miembros duplicados.
+Tupla es una colección ordenada e inmutable. Permite miembros duplicados.
+Set es una colección que no está ordenada, inmutable*, y sin indexar. No hay miembros duplicados.
+Diccionario es una colección que se ordena** y cambiantes. No hay miembros duplicados.
+"""
+
+
+
+""" 
+Python - Cambiar elementos de la lista
+
+
+Cambiar el valor del objeto
+Para cambiar el valor de un artículo específico, Consulte el número de índice:
+"""
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+
+""" 
+Cambiar un rango de valores de objetos
+Para cambiar el valor de los elementos dentro de un rango específico, define una lista con los nuevos valores y consulta el rango de números de índice donde quieres insertar los nuevos valores:
+"""
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+
+""" 
+Si insertas más elementos de los que reemplazas, los nuevos elementos se insertarán donde lo especificaste y los objetos restantes se moverán en consecuencia:
+Cambia el segundo valor reemplazándolo por dos nuevos Valores:
+"""
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+# Nota: La longitud de la lista cambiará cuando el número de elementos insertados no coincida con el número de elementos reemplazados.
+
+""" 
+Si insertas menos elementos de los que reemplazas, los nuevos elementos se insertarán donde lo especificaste y los objetos restantes se moverán en consecuencia:
+Cambia el segundo y tercer valor reemplazándolo por un solo valor:
+"""
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+
+
+""" 
+Elementos insertados
+Para insertar un nuevo elemento de lista, sin reemplazar ninguno de los valores existentes, podemos usar el método.insert()
+
+El método inserta un ítem en el índice especificado:insert()
+"""
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+# ['apple', 'banana', 'watermelon', 'cherry']
+
+
+""" 
+Python - Add List Items
+
+Añadir elementos
+Para añadir un elemento al final de la lista, utiliza el método:append()
+
+"""
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+# ['apple', 'banana', 'cherry', 'orange']
+
+""" 
+Extender la lista
+Para añadir elementos de otra lista a la lista actual, utiliza el método.extend()
+"""
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+# ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+# 
+
+
+# 
+""" 
+Los elementos se añadirán al final de la lista.
+
+Añadir cualquier iterable
+El método no tiene que añadir listas, puedes añadir cualquier objeto iterable (tuplas, conjuntos, diccionarios etc.).extend()
+
+Ejemplo
+Añadir elementos de una tupla a una lista:
+
+"""
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+
+# 
