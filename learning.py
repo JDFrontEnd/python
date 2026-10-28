@@ -676,3 +676,30 @@ El operador ternario permite asignar un valor si una condición es verdadera, y 
 num = 6
 
 x = "WEEKEND!" if num > 5 else "Workday"
+# Nota: El operador ternario no es un operador real, es una expresión condicional, O una frase abreviada de si lo dicen.
+
+""" En lugar de Elif:
+El operador ternario puede usarse en lugar de en sentencias if más largas:elif 
+
+Asignar:
+- "Viernes" si num es 5
+- "Sábado" si num es 6
+- "Domingo" si num es 7
+- si no, asignar "día laborable":
+
+num = 6
+"""
+
+
+
+""" 
+Operadores de comparación
+
+Operadores de comparación de encadenamiento
+Python permite encadenar operadores de comparación:
+"""
+x = 5
+
+# print(1 < x < 10)
+
+# print(1 < x and x < 10)
