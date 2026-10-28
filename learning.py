@@ -667,3 +667,12 @@ precio_final = precio - descuento
 precio = 10000
 
 # print(precio_final := precio - precio * 0.20)
+
+""" El Operador Ternario 
+
+El operador ternario permite asignar un valor si una condición es verdadera, y otro si es falsa:
+"""
+
+num = 6
+
+x = "WEEKEND!" if num > 5 else "Workday"

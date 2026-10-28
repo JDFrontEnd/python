@@ -42,6 +42,7 @@ def Actionleave():
     user["saldo"] -= actionL
     print(f"dinero retirado: ${actionL}")
     print(f"su saldo restante: ${user['saldo']}")
+    GoBack()
     
 #funcion para retirear dinero
 def ActionTransfer():
@@ -50,6 +51,7 @@ def ActionTransfer():
     user["saldo"] -= actionT
     print(f"dinero transferido: ${actionT}")
     print(f"su saldo restante: ${user['saldo']}")
+    GoBack()
     
     
 # funcion para consignar dinero
@@ -59,6 +61,7 @@ def ActionDeposit():
     user["saldo"] += actionD
     print(f"dinero consignado: ${actionD}")
     print(f"su saldo restante: ${user['saldo']}")
+    GoBack()
     
     
 # funcion navegar al inicio o salir a la interfaz
@@ -74,27 +77,34 @@ def GoBack():
 def action():
     global actionUser
     
-    actionUser = input("que quieres hacer: (retirar, tranferir, consignar, salir) ")
+    print(f"Saldo actual: {user['saldo']}")
+    actionUser = input("que quieres hacer: (retirar, transferir, consignar, salir) ")
     
-    if actionUser == "retirar":
-        Actionleave()
-    elif actionUser == "tranferir":
-        ActionTransfer()
+    
+    if actionUser != "retirar" and actionUser != "transferir" and actionUser != "consignar" and actionUser != "salir":
+        print("¡Error!, copie correctamente el comando")
+        return action()
+    elif actionUser == "retirar":
+        Actionleave()     
+    elif actionUser == "transferir":
+        ActionTransfer()   
     elif actionUser == "consignar":
         ActionDeposit()
-    
-    GoBack()
+    elif actionUser == "salir":
+        interfaz()
     
 
 def interfaz():
     global accoutConfirmation
     print("<===============================================================================>")
-    accoutConfirmation = input("\n HOLA BIENVENIDO A BANK.PY \n ¿tienes una cuenta abierta?\n  si - no \\ ")
-    print("<===============================================================================>")
+    accoutConfirmation = input("\n \t \t \tHOLA BIENVENIDO A BANK.PY \n \t \t \t¿tienes una cuenta abierta?\n \t \t \t \t si - no -> ")
     
-    if accoutConfirmation == "si":
+    if accoutConfirmation != "si" and accoutConfirmation != "no":
+        print("¡Error!, copie correctamente el comando")
+        return interfaz()
+    elif accoutConfirmation == "si":
         loginUser()
-    else:
+    elif accoutConfirmation == "no":
         print("si no tines cuenta crea una")
         
 
