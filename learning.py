@@ -958,3 +958,9 @@ thistuple = ("kiwi", "orange")
 thislist.extend(thistuple)
 
 # 
+
+usersData = {
+    "user1": {"usuario": "juan diego mesa", "passward": 123456789,"saldo": 0},
+    "user2": {"usuario": "pedro", "passward": 246810,"saldo": 0},
+    "user3": {"usuario": "anna", "passward": 3691215,"saldo": 0}
+}

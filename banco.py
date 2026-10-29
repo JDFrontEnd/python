@@ -4,15 +4,6 @@ user = {
     "saldo": 0
 }
 
-usersData = {
-    "user1": {"usuario": "juan diego mesa", "passward": 123456789,"saldo": 0},
-    "user2": {"usuario": "pedro", "passward": 246810,"saldo": 0},
-    "user3": {"usuario": "anna", "passward": 3691215,"saldo": 0}
-}
-
-users = [usersData["user1"], usersData["user2"], usersData["user3"]]
-
-
 # funcion login usuario
 
 def loginUser():
@@ -42,9 +33,9 @@ def Actionleave():
     global actionL
     print(user["saldo"])
     actionL = int(input("cuanto deseas retirar: ")) 
-    if actionL - user["saldo"] == -user["saldo"]:
+    if actionL - user["saldo"] > 0:
         print("Error: saldo insufisiente")
-        return Actionleave
+        return Actionleave()
     elif actionL == user["saldo"] or actionL > user["saldo"] or actionL - user["saldo"] == 0: 
         user["saldo"] -= actionL
         print(f"dinero retirado: ${actionL}")
@@ -56,9 +47,9 @@ def ActionTransfer():
     global actionT
     print(user["saldo"])
     actionT = int(input("cuanto deseas transferir: "))  
-    if actionT - user["saldo"] == -user["saldo"]:
+    if actionT - user["saldo"] > 0:
             print("Error: saldo insufisiente")
-            return ActionTransfer
+            return ActionTransfer()
     elif actionT == user["saldo"] or actionT > user["saldo"] or actionT - user["saldo"] == 0: 
         user["saldo"] -= actionT
     print(f"dinero transferido: ${actionT}")
