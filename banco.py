@@ -5,7 +5,6 @@ user = {
 }
 
 # funcion login usuario
-
 def loginUser():
     global usuario
     usuario = input("ingrese su nombre de usuario: ")
