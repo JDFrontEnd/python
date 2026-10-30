@@ -32,7 +32,7 @@ def Actionleave():
     global actionL
     print(user["saldo"])
     actionL = int(input("cuanto deseas retirar: ")) 
-    if actionL - user["saldo"] > 0:
+    if actionL - user["saldo"] < 0:
         print("Error: saldo insufisiente")
         return Actionleave()
     elif actionL == user["saldo"] or actionL > user["saldo"] or actionL - user["saldo"] == 0: 
@@ -46,7 +46,7 @@ def ActionTransfer():
     global actionT
     print(user["saldo"])
     actionT = int(input("cuanto deseas transferir: "))  
-    if actionT - user["saldo"] > 0:
+    if actionT - user["saldo"] < 0:
             print("Error: saldo insufisiente")
             return ActionTransfer()
     elif actionT == user["saldo"] or actionT > user["saldo"] or actionT - user["saldo"] == 0: 

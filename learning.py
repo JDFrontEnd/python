@@ -957,27 +957,3 @@ thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
 thislist.extend(thistuple)
 
-# 
-
-usersData = {
-    "user1": {"usuario": "juan diego mesa", "passward": 123456789,"saldo": 0},
-    "user2": {"usuario": "pedro", "passward": 246810,"saldo": 0},
-    "user3": {"usuario": "anna", "passward": 3691215,"saldo": 0}
-}
-
-
-PreciosCuadernos = 4500
-
-PreciosLapiceros = 1800
-
-Cuadernos = int(input("cuaderno:"))
-
-lapiz = int(input("lapiz:"))
-
-a = Cuadernos * PreciosCuadernos
-
-b = lapiz * PreciosLapiceros
-
-c = a + b
-
-print(f"precio lapiz: {b}, precio cuadernos: {a}, total: {c}")
