@@ -138,3 +138,15 @@ print(f"saldo total: ${saldo * TRM}")
 consignacion = int(input("ingrese el monto a tranferir:"))
 saldo = consignacion + saldo
 print(f"saldo total: ${saldo * TRM}")  
+
+
+passward = 123456789 
+user = "juan"
+
+userInput = input("usuario:")
+passwardInput = int(input("contraseña:"))
+
+if ((user == userInput) & (passward == passwardInput)):
+    print(True)
+else:
+    print(False)
